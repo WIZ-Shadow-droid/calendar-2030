@@ -1,0 +1,94 @@
+body {
+  background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.title {
+  text-align: center;
+  font-size: 3em;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+  margin-bottom: 40px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.month {
+  background-color: #111;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 20px #00ffff;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.month:hover {
+  transform: scale(1.03);
+}
+
+.month h2 {
+  text-align: center;
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.weekdays, .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.weekdays div {
+  text-align: center;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.day, .holiday {
+  text-align: center;
+  padding: 16px 0;
+  border: 2px solid #444;
+  background-color: #000;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1em;
+  cursor: default;
+  transition: all 0.2s ease-in-out;
+}
+
+.day:hover, .holiday:hover {
+  background-color: #222;
+  transform: scale(1.05);
+}
+
+.holiday {
+  background-color: #ff0033;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #ff0033;
+  box-shadow: 0 0 10px #ff0033;
+}
+
+.holiday:hover {
+  background-color: #ff3366;
+  box-shadow: 0 0 15px #ff3366;
+}
+
+.empty {
+  visibility: hidden;
+}
+
